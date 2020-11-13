@@ -40,7 +40,7 @@ class UnknownSkill(FallbackSkill):
                     self.log.info('Fallback type: ' + i)
                     self.speak_dialog(i, data={'remaining': l.replace(i, '')})
                     return True
-        self.speak_dialog('unknown')
+        self.speak_dialog('unknown', is_error=True)
         return True
 
 
